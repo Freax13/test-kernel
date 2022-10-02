@@ -18,6 +18,5 @@ features = ["regular", "size_14"]
 
 [patch.crates-io]
 # Change this to the revision of the bootloader you want to test.
-bootloader = { git = "https://github.com/rust-osdev/bootloader", rev = "960671c", package = "bootloader", version = "=0.11.0-alpha.0" }
-bootloader_api = { git = "https://github.com/rust-osdev/bootloader", rev = "960671c", package = "bootloader_api", version = "=0.1.0-alpha.0" }
-
+bootloader = { git = "https://github.com/rust-osdev/bootloader", branch = "next", package = "bootloader", version = "=0.11.0-alpha" }
+bootloader_api = { git = "https://github.com/rust-osdev/bootloader", branch = "next", package = "bootloader_api", version = "=0.1.0-alpha.0" }

@@ -7,10 +7,10 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.64"
-bootloader = "=0.11.0-alpha.0"
+bootloader = "=0.11.0-alpha"
 ovmf-prebuilt = "0.1.0-alpha.1"
 test-kernel = { path = "..", artifact = "bin", target = "x86_64-unknown-none" }
 
 [build-dependencies]
-bootloader = "=0.11.0-alpha.0"
+bootloader = "=0.11.0-alpha"
 test-kernel = { path = "..", artifact = "bin", target = "x86_64-unknown-none" }
