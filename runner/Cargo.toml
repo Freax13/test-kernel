@@ -7,10 +7,9 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.64"
-bootloader = "=0.11.0-alpha.0"
+bootloader = { git = "https://github.com/rust-osdev/bootloader", branch = "next" }
 ovmf-prebuilt = "0.1.0-alpha.1"
 test-kernel = { path = "..", artifact = "bin", target = "x86_64-unknown-none" }
 
 [build-dependencies]
-bootloader = "=0.11.0-alpha.0"
 test-kernel = { path = "..", artifact = "bin", target = "x86_64-unknown-none" }
