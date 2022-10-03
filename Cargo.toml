@@ -8,15 +8,10 @@ members = ["runner"]
 resolver = "2"
 
 [dependencies]
-bootloader_api = "0.1.0-alpha.0"
+bootloader_api = { git = "https://github.com/rust-osdev/bootloader", branch = "next" }
 uart_16550 = "0.2.10"
 
 [dependencies.noto-sans-mono-bitmap]
 version = "0.1.2"
 default-features = false
 features = ["regular", "size_14"]
-
-[patch.crates-io]
-# Change this to the revision of the bootloader you want to test.
-bootloader = { git = "https://github.com/rust-osdev/bootloader", branch = "next", package = "bootloader", version = "=0.11.0-alpha" }
-bootloader_api = { git = "https://github.com/rust-osdev/bootloader", branch = "next", package = "bootloader_api", version = "=0.1.0-alpha.0" }
