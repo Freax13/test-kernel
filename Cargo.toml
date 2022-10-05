@@ -18,10 +18,3 @@ uart_16550 = "0.2.10"
 version = "0.1.2"
 default-features = false
 features = ["regular", "size_14"]
-
-
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
