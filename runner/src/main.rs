@@ -17,7 +17,6 @@ fn main() -> Result<()> {
 
     let mut cmd = Command::new("qemu-system-x86_64");
     cmd.arg("-bios").arg(ovmf_prebuilt::ovmf_pure_efi());
-    cmd.arg("-enable-kvm");
     cmd.arg("-drive")
         .arg(format!("format=raw,file={}", out_gpt_path.display()));
     let mut child = cmd.spawn()?;

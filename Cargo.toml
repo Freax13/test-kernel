@@ -1,7 +1,10 @@
+cargo-features = ["per-package-target"]
+
 [package]
 name = "test-kernel"
 version = "0.1.0"
 edition = "2021"
+default-target = "x86_64-unknown-none"
 
 [workspace]
 members = ["runner"]
