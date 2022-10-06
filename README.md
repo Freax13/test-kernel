@@ -30,6 +30,7 @@ The test kernel will do the following things:
 - Log the bootloader version
 - Log the offset of the physical memory mapping created by the bootloader
 - Log the memory map provided by the bootloader
+- Log the current CMOS time
 - Attempt to write all usable memory to check if the memory map is correct
 
 Last but not least, the test kernel will log "Done". If this message isn't logged one of the tests caused a crash.

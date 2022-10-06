@@ -394,6 +394,7 @@ dependencies = [
  "bootloader_api",
  "noto-sans-mono-bitmap",
  "uart_16550",
+ "x86_64",
 ]
 
 [[package]]

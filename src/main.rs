@@ -13,6 +13,7 @@ use logger::{log, Color};
 
 mod graphical;
 mod logger;
+mod time;
 
 const CONFIG: BootloaderConfig = {
     let mut config = BootloaderConfig::new_default();
@@ -98,6 +99,15 @@ fn main(boot_info: &'static mut BootInfo) -> ! {
             core::ptr::write_bytes(addr as *mut u8, 0xff, size as usize);
         }
     }
+
+    let now = time::now();
+    log(
+        format_args!(
+            "current time: {}-{}-{} {}:{}:{}, centry: {}",
+            now.year, now.month, now.day, now.hour, now.minute, now.second, now.century
+        ),
+        Color::White,
+    );
 
     log("Done!", Color::White);
 
