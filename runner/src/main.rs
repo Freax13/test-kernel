@@ -1,19 +1,15 @@
+use anyhow::Result;
+use std::env;
 use std::process::Command;
 
-use anyhow::Result;
-
 fn main() -> Result<()> {
+    let kernel_path = env::var("KERNEL_PATH")
+        .unwrap_or(String::from("target/x86_64-unknown-none/debug/test-kernel"));
     let out_gpt_path = &AsRef::as_ref("target/uefi.img");
-    bootloader::UefiBoot::new(AsRef::as_ref(env!(
-        "CARGO_BIN_FILE_TEST_KERNEL_test-kernel"
-    )))
-    .create_disk_image(out_gpt_path)?;
+    bootloader::UefiBoot::new(AsRef::as_ref(&kernel_path)).create_disk_image(out_gpt_path)?;
 
     let out_bios_path = &AsRef::as_ref("target/bios.img");
-    bootloader::BiosBoot::new(AsRef::as_ref(env!(
-        "CARGO_BIN_FILE_TEST_KERNEL_test-kernel"
-    )))
-    .create_disk_image(out_bios_path)?;
+    bootloader::BiosBoot::new(AsRef::as_ref(&kernel_path)).create_disk_image(out_bios_path)?;
 
     let mut cmd = Command::new("qemu-system-x86_64");
     cmd.arg("-bios").arg(ovmf_prebuilt::ovmf_pure_efi());
