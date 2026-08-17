@@ -11,7 +11,7 @@ members = ["runner"]
 resolver = "2"
 
 [dependencies]
-bootloader_api = { git = "https://github.com/rust-osdev/bootloader", branch = "next" }
+bootloader_api = { git = "https://github.com/rust-osdev/bootloader", branch = "main" }
 uart_16550 = "0.2.10"
 
 [dependencies.noto-sans-mono-bitmap]
