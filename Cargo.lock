@@ -50,7 +50,7 @@ dependencies = [
 [[package]]
 name = "bootloader"
 version = "0.11.17"
-source = "git+https://github.com/rust-osdev/bootloader?branch=main#610301b5c372190b78fbf41a95f5014c3c5d4fc6"
+source = "git+https://github.com/phip1611/bootloader?branch=bump-uart#c6d62d7d85a040388229c960722674b18a9cf863"
 dependencies = [
  "anyhow",
  "bootloader-boot-config",
@@ -65,7 +65,7 @@ dependencies = [
 [[package]]
 name = "bootloader-boot-config"
 version = "0.11.17"
-source = "git+https://github.com/rust-osdev/bootloader?branch=main#610301b5c372190b78fbf41a95f5014c3c5d4fc6"
+source = "git+https://github.com/phip1611/bootloader?branch=bump-uart#c6d62d7d85a040388229c960722674b18a9cf863"
 dependencies = [
  "serde",
 ]
@@ -73,7 +73,7 @@ dependencies = [
 [[package]]
 name = "bootloader_api"
 version = "0.11.17"
-source = "git+https://github.com/rust-osdev/bootloader?branch=main#610301b5c372190b78fbf41a95f5014c3c5d4fc6"
+source = "git+https://github.com/phip1611/bootloader?branch=bump-uart#c6d62d7d85a040388229c960722674b18a9cf863"
 
 [[package]]
 name = "build_const"
